@@ -1,0 +1,57 @@
+body {
+    background: url('background2.jpeg') center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+
+.container-fluid {
+    height: 100vh;
+}
+h1.display-4 {
+    font-size: 4.5rem; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #ffffff; /* Text color */
+    /* Add any additional styling you desire */
+    margin: 200px 0;
+}
+.btn-group.top-left {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+
+
+.header {
+
+    padding: 20px;
+    text-align: center;
+}
+
+.btn-group {
+    margin-top: 20px;
+}
+
+.main-content {
+    text-align: center;
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}

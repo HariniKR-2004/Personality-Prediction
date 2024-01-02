@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='visualization.css') }}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Visualizations</title>
+    <!-- Add any additional styles or scripts here -->
+</head>
+<body>
+    <h1>Visualizations</h1>
+
+    <!-- Bar Chart -->
+    <div class="visualization-container">
+        {{ plot1_html | safe }}
+    </div>
+
+    <!-- Pie Chart -->
+    <div class="visualization-container">
+        {{ plot2_html | safe }}
+    </div>
+
+    <!-- Average Post Length by Personality Type -->
+    <div class="visualization-container">
+        {{ plot3_html | safe }}
+    </div>
+
+    <!-- personality type relationship network -->
+    <div class="visualization-container">
+        {{ plot4_html | safe }}
+    </div>
+
+    <!-- TREE PLOT -->
+    <div class="visualization-container">
+        {{ plot5_html | safe }}
+    </div>
+
+    <!-- Parallel Coordinate Plot -->
+    <div class="visualization-container">
+        {{ plot6_html | safe }}
+    </div>
+
+    <!-- 3D Scatter Plot of Personality Traits -->
+    <div class="visualization-container">
+        {{ plot7_html | safe }}
+    </div>
+
+    <!-- Distribution of Personality Type Components -->
+    <div class="visualization-container">
+        {{ plot7_html | safe }}
+    </div>
+
+    <!-- Stem Plot -->
+    <div class="visualization-container">
+        <img class="chart-image" src="data:image/png;base64, {{ stem_plot | safe }}" alt="Stem Plot">
+    </div>
+
+    <!-- Joint PLot -->
+    <div class="visualization-container">
+        <img class="chart-image" src="data:image/png;base64, {{ joint_plot | safe }}" alt="Joint Plot">
+    </div>
+
+    <!-- Swarm Plot of Word Count for Each Personality Type -->
+    <div class="visualization-container">
+        <img class="chart-image" src="data:image/png;base64, {{ swarm_plot | safe }}" alt="Swarm Plot of Word Count for Each Personality Type">
+    </div>
+
+    <!-- Outlier Analysis Distribution of post length -->
+    <div class="visualization-container">
+        {{ plot8_html | safe }}
+    </div>
+
+    <!-- Outlier Analysis BOX PLOT Distribution of post length -->
+    <div class="visualization-container">
+        {{ plot9_html | safe }}
+    </div>
+
+    <!-- Distribution of post length after removal of OUTLIER -->
+    <div class="visualization-container">
+        {{ plot10_html | safe }}
+    </div>
+
+    <!--Distribution of Personality Type Components after removal of outliers -->
+    <div class="visualization-container">
+        <img class="chart-image" src="{{url_for('static',filename='distribution_plot.png')}}" alt="Distribution of Personality Type Components after removal of outliers">
+    </div>
+
+
+    <!-- Top 20 Most Frequent Words Across Personality Types -->
+    <div class="visualization-container">
+        <img class="chart-image" src="data:image/png;base64, {{ top20_freq_words | safe }}" alt="Top 20 Most Frequent Words Across Personality Types">
+    </div>
+
+    <!-- Average Sentiment Score by MBTI Type -->
+    <div class="visualization-container">
+        <img class="chart-image" src="data:image/png;base64, {{ avg_sentiment_score | safe }}" alt="Average Sentiment Score by MBTI Type">
+    </div>
+
+    <!-- Readability Score -->
+    <div class="visualization-container">
+        <img class="chart-image" src="data:image/png;base64, {{ readability_score | safe }}" alt="Readability Score">
+    </div>
+
+    <!--WORD CLOUD FOR THE WHOLE DATASET -->
+    <div class="visualization-container">
+        <img class="chart-image" src="{{url_for('static',filename='word_cloud.png')}}" alt="Word Cloud">
+    </div>
+
+    <!--WORD CLOUD FOR EACH PERSONALITY TYPE -->
+    <div class="visualization-container">
+        <img class="chart-image" src="{{url_for('static',filename='word_cloud_type.png')}}" alt="Word Cloud For Each Personality Type">
+    </div>
+
+    <!-- Add any additional HTML elements or scripts here -->
+</body>
+</html>

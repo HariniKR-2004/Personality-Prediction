@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #1a1a1a; /* Dark background color */
+            color: #ffffff; /* Text color */
+            font-family: 'Arial', sans-serif; /* Change the font as needed */
+        }
+
+        .container-fluid {
+            padding: 20px;
+        }
+
+        .header, .main-content {
+            animation: fadeIn 2s ease-in-out; /* Apply fadeIn animation to these elements */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <title>About - Personality Prediction</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <h1 class="display-4">About Personality Prediction</h1>
+        </div>
+
+        <div class="main-content">
+            <p class="lead">Welcome to Personality Prediction, your guide to understanding and predicting personalities based on the Myers-Briggs Type Indicator (MBTI) dataset.</p>
+
+            <h2>What is MBTI?</h2>
+            <p>The Myers-Briggs Type Indicator is a psychological tool that categorizes individuals into 16 personality types based on their preferences in four dichotomies: Extraversion/Introversion, Sensing/Intuition, Thinking/Feeling, and Judging/Perceiving.</p>
+            <br>
+            <h2>How Does Our Prediction Work?</h2>
+            <p>We use advanced Natural Language Processing (NLP) techniques and machine learning models to analyze text data associated with MBTI personalities. Our model predicts your personality type based on the patterns in your input text.</p>
+
+            <h2>Explore and Discover</h2>
+            <p>Use the "Predict" button to discover your predicted personality type. Explore the visualizations to gain insights into personality patterns within the MBTI dataset.</p>
+
+            <h2>Contact Us</h2>
+            <p>Have questions or feedback? Contact our team at <a href="mailto:info@personalityprediction.com">info@personalityprediction.com</a>.</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
